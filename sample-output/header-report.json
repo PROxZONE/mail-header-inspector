@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "from": [
+    "support@example.test"
+  ],
+  "return_path": [
+    "bounce@mailer.invalid"
+  ],
+  "reply_to": [
+    "helpdesk@reply.test"
+  ],
+  "from_domain_ascii": "example.test",
+  "subject": "Synthetic account review exercise",
+  "message_id": "<practice-001@example.test>",
+  "received_headers_in_stored_order": [
+    "from relay.example.test (192.0.2.20) by gateway.example.test; Thu, 1 Jan 2026 09:00:00 +0000"
+  ],
+  "authentication_results": [
+    {
+      "authserv_id": "gateway.example.test",
+      "claims": [
+        {
+          "method": "spf",
+          "reported_result": "fail"
+        },
+        {
+          "method": "dkim",
+          "reported_result": "none"
+        },
+        {
+          "method": "dmarc",
+          "reported_result": "fail"
+        }
+      ],
+      "raw_header": "gateway.example.test; spf=fail smtp.mailfrom=mailer.invalid; dkim=none; dmarc=fail header.from=example.test",
+      "trusted": false
+    }
+  ],
+  "observations": [
+    "Return-Path domain differs from the From domain; legitimate services can do this.",
+    "Reply-To domain differs from the From domain; legitimate services can do this.",
+    "An Authentication-Results header reports a failure/error; corroborate it with a trusted gateway."
+  ],
+  "parser_defects": [],
+  "limitations": "Header claims are untrusted input. This tool performs no DNS queries, SPF evaluation, DKIM signature verification or DMARC evaluation. A domain mismatch alone is not proof of phishing."
+}

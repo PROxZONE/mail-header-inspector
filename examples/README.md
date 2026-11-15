@@ -1,0 +1,1 @@
+Both messages are synthetic. `review-needed.eml` has domain differences and failure claims. `ordinary.eml` has passing claims, which are still marked untrusted by the tool. No message is declared safe or malicious.

@@ -1,0 +1,11 @@
+From: Service Desk <support@example.test>
+To: analyst@example.test
+Return-Path: <bounce@mailer.invalid>
+Reply-To: helpdesk@reply.test
+Subject: Synthetic account review exercise
+Message-ID: <practice-001@example.test>
+Date: Thu, 1 Jan 2026 09:00:00 +0000
+Received: from relay.example.test (192.0.2.20) by gateway.example.test; Thu, 1 Jan 2026 09:00:00 +0000
+Authentication-Results: gateway.example.test; spf=fail smtp.mailfrom=mailer.invalid; dkim=none; dmarc=fail header.from=example.test
+
+Fictional exercise. No credentials, links, or attachments.

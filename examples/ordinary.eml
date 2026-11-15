@@ -1,0 +1,7 @@
+From: Analyst <analyst@example.test>
+To: team@example.test
+Return-Path: <analyst@example.test>
+Subject: Synthetic ordinary-message example
+Authentication-Results: gateway.example.test; spf=pass; dkim=pass; dmarc=pass
+
+Even passing claims require a trusted authentication boundary.
